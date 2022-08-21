@@ -13,5 +13,7 @@ namespace TMSAPI.api.Data
 
         public DbSet<X4AlarmGroups> X4AlarmGroups { get; set; }
         public DbSet<X4InstanceRemarks> X4InstanceRemarks { get; set; }
+
+        public DbSet<AutomationControlPropertyRemarks> AutomationControlPropertyRemarks { get; set; }
     }
 }
