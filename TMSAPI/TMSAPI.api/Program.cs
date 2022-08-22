@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TMSAPI.api.Data;
+using TMSAPI.api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,9 @@ builder.Services.AddDbContext<XAMRuntimeX4Context>(
    );
 
 //dbcontexts end
+
+builder.Services.AddScoped<IAlarms, Alarms>();
+
 
 var app = builder.Build();
 
