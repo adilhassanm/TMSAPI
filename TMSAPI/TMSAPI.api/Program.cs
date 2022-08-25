@@ -25,7 +25,7 @@ builder.Services.AddDbContext<XAMControlX4Context>(
 builder.Services.AddDbContext<XAMRuntimeX4Context>(
    options =>
    {
-       options.UseSqlServer(builder.Configuration.GetConnectionString("XAMRuntimeX4Context"));
+       options.UseSqlServer(builder.Configuration.GetConnectionString("XAMRuntimeX4"));
 
    }
    );
