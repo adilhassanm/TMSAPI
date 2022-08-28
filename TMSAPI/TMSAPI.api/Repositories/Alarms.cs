@@ -49,8 +49,9 @@ namespace TMSAPI.api.Repositories
 });
             */
 
+            var journal = xAMRuntimeX4Context.X4Journals;
 
-            var finalAlarm2 = xAMRuntimeX4Context.X4Journals
+            var finalAlarm2 = journal
             .Join(xAMControlX4Context.X4InstanceRemarks,
             j => j.InstanceID, i => i.Instance_ID, (j, i) => new { j, i })
             .Join(xAMControlX4Context.AutomationControlPropertyRemarks,
